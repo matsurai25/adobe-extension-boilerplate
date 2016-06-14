@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<ExtensionManifest Version="4.0" ExtensionBundleId="com.MyCompany.MyProductName"  ExtensionBundleVersion="1.0.0"
+		ExtensionBundleName="MyPanelName" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ExtensionList>
+		<Extension Id="com.MyCompany.MyProductName.extension1" Version="1.0" />
+	</ExtensionList>
+
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="AEFT" Version="[13.0,14.9]" />
+			<Host Name="PPRO" Version="[7.0,9.9]" />
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="4.0" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+
+	<DispatchInfoList>
+		<Extension Id="com.MyCompany.MyProductName.extension1">
+			<DispatchInfo >
+				<Resources>
+                    <MainPath>./index.html</MainPath>
+                    <ScriptPath>./application.jsx</ScriptPath>
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>TalkOnAe-0.2</Menu>
+					<Geometry>
+						<Size>
+							<Height>100</Height>
+							<Width>250</Width>
+						</Size>
+						<MaxSize>
+							<Height>500</Height>
+							<Width>500</Width>
+						</MaxSize>
+						<MinSize>
+							<Height>100</Height>
+							<Width>250</Width>
+						</MinSize>
+					</Geometry>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+	</DispatchInfoList>
+</ExtensionManifest>

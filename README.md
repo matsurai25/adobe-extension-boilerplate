@@ -1,2 +1,5 @@
 # adobe-html5-panel-template
-Template repository for Adobe HTML5 panel 
+AdobeAfterEffectsでいい感じにHTML5パネルを作るときにまとめといたもの。  
+
+### Usage
+ - `npm i`
