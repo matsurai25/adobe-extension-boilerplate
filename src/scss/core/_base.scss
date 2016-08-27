@@ -1,0 +1,36 @@
+*,*:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Arial, Helvetica, sans-serif;
+	/* 計算しやすいようにroot要素に10px相当のサイズを指定 */
+	font-size: 62.5%;
+  color: #333;
+  height:100%;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li{
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 0;
+}
+
+h1,h2,h3,h4,figure,dl,dt,dd,ul,li {
+    margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
