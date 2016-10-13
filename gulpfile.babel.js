@@ -11,8 +11,8 @@ const xeditor = require('gulp-xml-editor'); // xmlの編集
 const exec = require('child_process').exec;
 const prompt = require('prompt'); // 対話形式のコマンドを実現
 const sequence = require('run-sequence'); // 実行順を指定できる
-const path = require('path'); //パスをいい感じに
-const fs = require('fs'); //ファイル操作
+const path = require('path'); // パスをいい感じに
+const fs = require('fs'); // ファイル操作
 const colors = require('colors'); // 色つきの標準出力
 const del = require('del'); // del
 
@@ -20,8 +20,7 @@ const HOME = process.env[process.platform == "win32" ? "USERPROFILE" : "HOME"];
 // for mac
 const CEP = `./Library/Application Support/Adobe/CEP/extensions/`;
 
-import Config from './src/config.js';
-const config = new Config();
+import config from './src/config.js';
 gulp.task('default', () => {
   sequence('build', 'watch');
 });
@@ -211,11 +210,10 @@ gulp.task('build:jade', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('src/**/*.jade', ['build:jade']);
-  gulp.watch('src/**/*.scss', ['build:scss']);
-  gulp.watch('src/**/*.js', ['build:js']);
-  gulp.watch('src/**/*.xml', ['build:xml']);
-  gulp.watch('dist/**/*', ['copyToCEP']);
+  gulp.watch(['src/**/*.jade'], () =>{ sequence('build:jade','copyToCEP'); });
+  gulp.watch(['src/**/*.js'], () =>{ sequence('build:js','copyToCEP'); });
+  gulp.watch(['src/**/*.scss'], () =>{ sequence('build:scss','copyToCEP'); });
+  gulp.watch(['src/assets/**/*'], () =>{ sequence('copy:assets','copyToCEP'); });
 });
 
 gulp.task('build', () => {
