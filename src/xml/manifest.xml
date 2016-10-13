@@ -9,7 +9,6 @@
 	<ExecutionEnvironment>
 		<HostList>
 			<Host Name="AEFT" Version="[13.0,14.9]" />
-			<Host Name="PPRO" Version="[7.0,9.9]" />
 		</HostList>
 		<LocaleList>
 			<Locale Code="All" />
