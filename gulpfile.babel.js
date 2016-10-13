@@ -34,7 +34,7 @@ gulp.task('certify', () => {
     console.log("http://labs.adobe.com/downloads/extensionbuilder3.html".underline.red);
     return;
   }
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var schema = {
       properties: {
         countryCode: {
@@ -103,7 +103,7 @@ gulp.task('export', () => {
     console.log("You have to run 'gulp certify' before 'gulp export'.\n".red);
     return;
   }
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     var schema = {
       properties: {
         password: {
