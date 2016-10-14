@@ -23,10 +23,11 @@
     "minimist": "^1.2.0",
     "moment": "^2.14.1",
     "prompt": "^1.0.0",
+    "require-dir": "^0.3.1",
     "require-globify": "^1.4.1",
     "run-sequence": "^1.2.2",
     "underscore": "^1.8.3",
-    "vinyl-source-stream": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "babel": {
     "presets": [
@@ -35,8 +36,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
-    "certify": "gulp certify",
+    "config": "gulp config",
     "export": "gulp export"
   }
 }
