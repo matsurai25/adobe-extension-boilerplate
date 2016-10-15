@@ -5,8 +5,8 @@ const sequence = require('run-sequence');
 
 requireDir('lib/tasks', {recurse: true});
 
-gulp.task('default', () => {
-  return sequence('config-load', 'build', 'watch');
+gulp.task('default', ['config-load'], () => {
+  return sequence('build', 'watch');
 });
 
 gulp.task('watch', () => {
