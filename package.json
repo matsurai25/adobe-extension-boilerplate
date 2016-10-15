@@ -10,6 +10,7 @@
     "babelify": "^7.3.0",
     "browserify": "^12.0.1",
     "colors": "^1.1.2",
+    "cson": "^3.0.2",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-jade": "^1.1.0",
@@ -36,7 +37,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "config": "gulp config",
+    "config": "gulp config-edit",
     "export": "gulp export"
   }
 }

@@ -1,13 +1,12 @@
 'use strict';
 const gulp = require('gulp');
 const requireDir = require('require-dir');
-const sequence = require('run-sequence'); // 実行順を指定できる
-const colors = require('colors'); // 色つきの標準出力
+const sequence = require('run-sequence');
 
 requireDir('lib/tasks', {recurse: true});
 
 gulp.task('default', () => {
-  return sequence('build', 'watch');
+  return sequence('config-load', 'build', 'watch');
 });
 
 gulp.task('watch', () => {

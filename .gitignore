@@ -32,3 +32,4 @@ dist
 ZXPSignCmd
 *.zxp
 *.p12
+config.cson
