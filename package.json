@@ -1,6 +1,6 @@
 {
   "name": "adobe-html5-panel-template",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "AdobeAfterEffectsでいい感じにHTML5パネルを作るときにまとめといたもの。",
   "author": "matsurai25",
   "homepage": "https://github.com/matsurai25/adobe-html5-panel-template#readme",
@@ -25,7 +25,6 @@
     "moment": "^2.14.1",
     "prompt": "^1.0.0",
     "require-dir": "^0.3.1",
-    "require-globify": "^1.4.1",
     "run-sequence": "^1.2.2",
     "underscore": "^1.8.3",
     "vinyl-source-stream": "^1.1.0"

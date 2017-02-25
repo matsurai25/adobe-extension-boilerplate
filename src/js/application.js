@@ -1,15 +1,8 @@
 // ホストアプリケーションとの連携を行う
-require('../../lib/CEP/CSInterface.js');
+window.CSInterface = require('../../lib/CEP/CSInterface.js');
+// パネルの背景色を管理
+const themeManager = require('../../lib/CEP/themeManager.js');
 
-// 諸々ライブラリ読み込み
-window.$ = require('jquery'); // 色々
-window._ = require('underscore'); // js処理拡張
-window.moment = require('moment'); // 日時を使いやすく
-
-// 実行系ファイル読み込み
-require('./module/**/*', {mode: 'expand'});
-
-$(() => {
-  window.CS = new CSinterface();
-  window.init();
-});
+// 開始
+themeManager.init(); // パネルの背景色を自動で合わせる
+require('./module/init.js')(); // 処理の開始
