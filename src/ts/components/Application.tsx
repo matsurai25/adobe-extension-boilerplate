@@ -3,7 +3,8 @@ import * as classNames from 'classnames'
 import * as styles from './Application.scss'
 import {
   setBackgroundColor,
-  applyReloadShortcut
+  applyReloadShortcut,
+  applyReloadEventListener
 } from '../util'
 import * as jquery from 'jquery'
 
@@ -30,6 +31,9 @@ class Application extends React.Component<{}, State> {
 
     // (開発用) トリプルクリックしたらリロードする
     applyReloadShortcut()
+
+    // (開発用) 特定のイベントがdispatchされたらリロードする
+    setTimeout(applyReloadEventListener, 0)
 
     jquery
       .ajax({
