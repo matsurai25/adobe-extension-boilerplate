@@ -1,14 +1,16 @@
-# adobe-extension-boilerplate
+# [WIP] adobe-extension-boilerplate
 - **This Repository is WIP.** If you want to use it, please maintain it for yourself.
 - I made this for AfterEffects and I only tried it with AfterEffects.
 - If you use it with other applications, please change the setting yourself.
 
 # Quick Start
-* git clone git@github.com:matsurai25/adobe-extension-boilerplate.git
-* (rm -r .git)
-* npm i
-* npm run config
-* npm start
+```
+$ git clone git@github.com:matsurai25/adobe-extension-boilerplate.git
+$ (rm -r .git)
+$ npm i
+$ npm run config
+$ npm start
+```
 
 # Dependences
 - TypeScript
