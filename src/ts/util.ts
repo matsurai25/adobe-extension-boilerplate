@@ -27,6 +27,15 @@ export const applyReloadShortcut = () => {
 }
 
 /**
+ * 開発用: 特定のイベントがdispatchされたらリロードする
+ *
+ * $.sendEvent('request-reload-extension')
+ */
+export const applyReloadEventListener = () => {
+  window.cs.addEventListener('request-reload-extension', () => location.reload())
+}
+
+/**
  * awaitするとsleepできる関数
  */
 export function sleep(time: number) {

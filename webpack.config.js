@@ -4,6 +4,7 @@ const Autoprefixer = require('autoprefixer')
 const postcssCustomProperties = require('postcss-custom-properties')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const XMLWebpackPlugin = require('xml-webpack-plugin')
+const ReloadExtensionsAfterCompilePlugin = require('./plugins/reloadExtensionsAfterCompilePlugin')
 
 const path = require('path')
 const configPath = path.resolve(
@@ -108,7 +109,9 @@ module.exports = {
           ),
           filename: 'CSXS/manifest.xml',
           data: {
-            bundleId: `${config.id}.${config.name}.${config.version}`,
+            bundleId: `${config.id}.${config.name}.${
+              config.version
+            }`,
             name: config.name
           }
         },
@@ -119,10 +122,12 @@ module.exports = {
           ),
           filename: '.debug',
           data: {
-            bundleId: `${config.id}.${config.name}.${config.version}`,
+            bundleId: `${config.id}.${config.name}.${
+              config.version
+            }`,
             name: config.name
           }
-        },
+        }
       ]
     }),
     new CopyWebpackPlugin(
@@ -134,15 +139,14 @@ module.exports = {
       ],
       { context: 'src' }
     ),
-    new CopyWebpackPlugin(
-      [
-        {
-          from: 'dist',
-          to: extensionsFolderPath,
-          dot: true
-        },
-      ],
-    )
+    new CopyWebpackPlugin([
+      {
+        from: 'dist',
+        to: extensionsFolderPath,
+        dot: true
+      }
+    ]),
+    new ReloadExtensionsAfterCompilePlugin()
   ],
   // import 文で .ts や .tsx ファイルを解決するため
   resolve: {
