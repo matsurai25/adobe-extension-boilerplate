@@ -1,41 +1,61 @@
 {
   "name": "adobe-html5-panel-template",
-  "version": "0.0.3",
-  "description": "AdobeAfterEffectsでいい感じにHTML5パネルを作るときにまとめといたもの。",
-  "author": "matsurai25",
+  "version": "0.0.5",
+  "description": "Template for Extension with Typescript and React Project",
+  "author": "matsurai",
   "homepage": "https://github.com/matsurai25/adobe-html5-panel-template#readme",
   "dependencies": {
-    "babel": "^6.5.2",
-    "babel-preset-es2015": "^6.14.0",
-    "babelify": "^7.3.0",
-    "browserify": "^12.0.1",
+    "@types/classnames": "^2.2.7",
+    "@types/jquery": "^3.3.29",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "autoprefixer": "^9.4.7",
+    "classnames": "^2.2.6",
     "colors": "^1.1.2",
-    "cson": "^3.0.2",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.1",
-    "gulp-sass-bulk-import": "^1.0.1",
-    "gulp-shell": "^0.5.2",
-    "gulp-xml-editor": "^2.2.1",
-    "jquery": "^3.1.1",
-    "minimist": "^1.2.0",
-    "moment": "^2.14.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "csinterface-ts": "^1.0.3",
+    "css-loader": "^2.1.0",
+    "del": "^3.0.0",
+    "file-loader": "^3.0.1",
+    "gulp": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "postcss-custom-properties": "^8.0.9",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.16.4",
     "prompt": "^1.0.0",
-    "require-dir": "^0.3.1",
-    "run-sequence": "^1.2.2",
-    "underscore": "^1.8.3",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "require-dir": "^1.2.0",
+    "reset-css": "^4.0.1",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "types-for-adobe": "^1.4.1",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "xml-webpack-plugin": "0.0.2"
   },
   "scripts": {
-    "start": "gulp",
-    "config": "gulp config-edit",
+    "start": "webpack -w",
+    "config": "gulp config",
     "export": "gulp export"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matsurai25/adobe-html5-panel-template.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matsurai25/adobe-html5-panel-template/issues"
   }
 }
