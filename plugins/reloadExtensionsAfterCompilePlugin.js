@@ -11,7 +11,7 @@ class MyPlugin {
   }
   apply(compiler) {
     const sendReloadEvent = () => {
-      console.log('Reload Requested')
+      console.log('⚡⚡⚡ 👻 Extension Reloaded ⚡⚡⚡')
       const command = `osascript -e 'tell application "Adobe After Effects CC 2019" to DoScriptFile "${scriptPath}"'`
       exec(command)
     }
@@ -28,7 +28,7 @@ class MyPlugin {
         )
 
         if (changedChunks.length > 0) {
-          sendReloadEvent()
+          setTimeout(sendReloadEvent, 300)
         }
         callback()
       }
