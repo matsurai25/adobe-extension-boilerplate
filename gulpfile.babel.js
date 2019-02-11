@@ -10,7 +10,6 @@ gulp.task('default', ['config-load'], () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(['src/**/*.jade'], () =>{ sequence('build:jade','copy'); });
   gulp.watch(['src/**/*.js'], () =>{ sequence('build:js','copy'); });
   gulp.watch(['src/**/*.scss'], () =>{ sequence('build:scss','copy'); });
 });
