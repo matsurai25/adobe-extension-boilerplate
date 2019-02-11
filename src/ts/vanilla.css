@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&subset=japanese');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', 'ヒラギノ角ゴ ProN W3',
+    Hiragino Kaku Gothic ProN, Arial, 'Noto Sans JP',
+    YuGothic, 'メイリオ', Meiryo, sans-serif;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,12 @@
+module.exports = {
+	"properties": {
+		"password": {
+			"description": "password",
+			"pattern": /^\S+$/,
+			"message": "Sorry, you cannot include white spaces.",
+			"hidden": true,
+			"replace": "*",
+			"required": true
+		}
+	}
+}
