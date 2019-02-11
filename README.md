@@ -1,33 +1,40 @@
-# adobe-html5-panel-template
-AdobeAfterEffectsでいい感じにHTML5パネルを作るときにまとめといたもの。  
-とりあえずmacのみ
+# adobe-extension-boilerplate
+- **This Repository is WIP.** If you want to use it, please maintain it for yourself.
+- I made this for AfterEffects and I only tried it with AfterEffects.
+- If you use it with other applications, please change the setting yourself.
 
-### 使い方
+# Quick Start
+* git clone git@github.com:matsurai25/adobe-extension-boilerplate.git
+* (rm -r .git)
+* npm i
+* npm run config
+* npm start
+
+# Dependences
+- TypeScript
+- React
+
+# `npm script`
 #### `npm start`
-開発の開始。
-開発中のアプリをCEPフォルダに自動的に追加する。
-
-#### `npm run export`
-zxpを出力する。
-出力用の設定をダイアログで行う。
+- Build Extension and watch.
+- The built extension is automatically copied to Extension's folder
+- Open AfterEffects and select your extension listed in `Window > Extensions`. 
+- If you want to update with extension open, you can update immediately by triple click.
+- in your first development, you have to change settings. `defaults write com.adobe.CSXS.9 PlayerDebugMode 1`
 
 #### `npm run config`
-ダイアログ形式で設定ファイルを変更できる。
+- Create and update config file interactively.
+- If on update, the previous value is defaulted.
 
-### 開発の流れ
-#### 導入
-* git clone
-* (rm -r .git)
-* npm install
-* npm run config
+#### `npm run export`
+- Convert Extension to a distributable format.
 
-#### 開発
+# reference
+* https://twitter.com/matsurai25/status/1094934013922336768
+
+## 開発の流れ
 * npm startでコンパイルとwatchを行う。
 * AdobeAfterEffectsの拡張機能の欄に自動的に現在開発中の項目が出る。
-* 更新した場合は一度パネルを閉じてまた開く必要がある(今後自動化したい)
-* 対象AEのバージョンなどはmanifest.xmlで定義する(今後自動化したい)
-* パネルを開いた状態でhttp://localhost:8088にアクセスすると開発者ツールが見れる
-
-#### 配布
-* npm run export
-
+* 更新した場合はトリプルクリックをすることで更新ができる
+* 対象AEのバージョンなどはmanifest.xmlで定義する
+* はじめて開発するときは、このあたりの値を変更する必要がある `defaults write com.adobe.CSXS.9 PlayerDebugMode 1`
